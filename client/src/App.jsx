@@ -12,10 +12,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={user ? <Home /> : <Navigate to="register" />} />
-        <Route path="/movies" element={user ? <Home type={"movie"} /> : <Navigate to="register" />} />
-        <Route path="/series" element={user ? <Home type={"series"} /> : <Navigate to="register" />} />
-        <Route path="/watch" element={user ? <Watch /> : <Navigate to="register" />} />
+        <Route path="/" element={user ? <Home /> : <Navigate to="/register" />} />
+        <Route path="/movies" element={user ? <Home type={"movie"} /> : <Navigate to="/register" />} />
+        <Route path="/series" element={user ? <Home type={"series"} /> : <Navigate to="/register" />} />
+        <Route path="/watch" element={user ? <Watch /> : <Navigate to="/register" />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
       </Routes>
